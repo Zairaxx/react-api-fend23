@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { UserInfo } from "./UserInfo";
+import {UserInfo} from "../UserInfo/UserInfo";
+import styles from './Post.module.css'
+
 export const Post = ({ title, body, userId }) => {
   const [user, setUser] = useState(null);
 
@@ -12,7 +14,7 @@ export const Post = ({ title, body, userId }) => {
   };
 
   return (
-    <div style={{ border: "2px solid black", margin: "2px 0" }}>
+    <div className={styles.border}>
       <h3>{title}</h3>
       <p>{body}</p>
       {user ? <UserInfo {...user} /> : <button onClick={getUser}>Get user</button>}

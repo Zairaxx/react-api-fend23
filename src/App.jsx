@@ -1,9 +1,8 @@
 import './App.css'
 import { useState, useEffect } from "react";
-import { Post } from "./components/Post";
+import { Post } from "./components/Post/Post";
 
 export default function App() {
-  const [show, setShow] = useState(true);
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
